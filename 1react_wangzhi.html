@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.bootcss.com/react/16.9.0/cjs/react.development.js"></script>
+    <script src="https://cdn.bootcss.com/react-dom/16.9.0/cjs/react-dom.development.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/7.0.0-beta.3/babel.min.js"></script> -->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    github：https://github.com/facebook/react </br>
+    CDN：https://www.bootcdn.cn/ </br>
+    官方网站：https://reactjs.org/ </br>
+    中文官网：https://zh-hans.reactjs.org/ </br>
+    第一个示例：https://zh-hans.reactjs.org/docs/hello-world.html </br>
+    在线编辑器：https://codepen.io/pen/?&editable=true </br>
+    中文社区：http://react-china.org/ </br>
+    简易入门教程：https://www.runoob.com/ </br>
+    <!-- www.bootcdn.cn/react/
+    reactDom.render(要渲染的内容，容器) -->
+
+    安装与使用 </br>
+    1、引入script，适用于入门学习 </br>
+    简易入门：https://www.runoob.com/react/react-install.html </br> 推荐
+
+    2、利用官方推荐的方法 </br>
+    npx create-react-app my-app </br>
+    cd my-app </br>
+    npm start </br>
+
+    3、yeoman脚手架（老师推荐） </br>
+    1)安装yeoman cnpm i -g yo </br>
+    2）安装生成器 cnpm i -g generator-react-webpack </br>
+    3）创建项目 yo react-webpack </br>
+    npm官网：https://www.npmjs.com/ </br>
+    搜索generator-react-webpack </br>
+    https://www.npmjs.com/package/generator-react-webpack </br>
+    4）安装依赖 </br>
+    cnpm i </br>
+    5）运行项目：npm start </br>
+    导出项目：npm run dist </br>
+
+    <div id="app"></div>
+</body>
+<script type="text/babel">
+    ReactDOM.render(  //使用jsx
+       <h1>Hello lyh</h1>,
+        document.getElementById('app')
+    );
+    ReactDOM.render( //不使用jsx
+        React.createElement('h1',{},'Hello lyh!!!!')
+        ,document.getElementById('app')
+    );     
+    </script>
+</html>

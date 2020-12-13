@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<p>可以直接在js中编写html代码，需要使用babel编译成js后后才能执行</p>
+
+插值运算符</br>
+<div id="app"></div>
+
+<!-- jsx表达式里面可以写
+<h1>{str,三元运算符，for循环，...展开运算符，样式，对象}</h1>
+如果使用class或for属性，必须使用className 或 htmlFor进行替换 
+{/*写注释的方法*/}-->
+</body>
+<script type="text/babel">
+    var str = "hello lyh!!!" //字符串
+    var a = 'miaomiao'; //id或class
+    var b = 10  //三元运算符
+    var obj1 = {type:'button',value:'点我'} //...展开运算符
+    var user = ['apple', 'pear', 'orange'];  //数组
+    var user1 = ['<li>apple</li>', '<li>pear</li>', '<li>orange</li>'];
+    var obj = { left: 100, top: 200 };  //样式，以对象形式存在的css
+    ReactDOM.render(
+        <div>
+            <h1>{str}</h1>
+            <h1 id="a">Hello lyh</h1>
+            <h1 id={a}>{'hello'}</h1>
+            <p>{b>5 ? '真' : '假'}</p>
+            <input {...obj1}/>
+
+            <h1 className="box">{true}</h1>
+            <input type="checkbox" id="like"/><label HtmlFor='like'>吃饭</label>
+            <label><input type="checkbox" id="like"/>吃饭</label>
+            <h1 style={{ color: 'red', fontSize: 12, }}>{null}123</h1>
+            <h1>{undefined}{Math.random()}</h1>
+            <h1>{[1, 2, 3]}</h1>
+            <ul>
+                <li>{user}</li>
+            </ul>
+            <ul>
+                {//数组
+                    user.map((user, index) => {
+                        return <li key={index}>{user}</li>
+                    })
+                }
+            </ul>
+            <ul>
+                {//对象
+                    Object.keys(obj).map(key => {
+                        return <li key={key}>{key}-{obj[key]}</li>
+                    })
+                }
+            </ul>
+        </div>,
+        document.getElementById('app')
+    ); 
+</script>
+
+</html>
